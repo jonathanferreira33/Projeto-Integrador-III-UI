@@ -1,0 +1,45 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  width: 500px;
+  margin-bottom: 40px;
+
+  mat-form-field{
+    width: 90%;
+  }
+}
+
+.form{
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  background-color: #4D7B2D;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  border: none !important;
+  transition: all linear 160ms;
+  cursor: pointer;
+  margin: 0 !important;
+  width: 450px;
+  height: 45px;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  background-color: #3e6325;
+
+}

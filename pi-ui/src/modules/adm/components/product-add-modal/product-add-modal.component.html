@@ -1,0 +1,35 @@
+<form [formGroup]="modalForm" (ngSubmit)="addProduct()" class="form">
+<div class="page">
+    <div mat-dialog-title>
+        <h2>Adicionar novo produto</h2>
+    </div>
+        <mat-form-field appearance="outline">
+            <mat-label>Nome</mat-label>
+            <input matInput formControlName="Name">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Categoria</mat-label>
+            <mat-select [(ngModel)]="modeselect" [placeholder]="modeselect" formControlName="Category">
+                <mat-option value='2'>Alimentos</mat-option>
+                <mat-option value='3'>Roupas</mat-option>
+                <mat-option value='4'>Higiene</mat-option>
+                <mat-option value='5'>Higiene Pessoal</mat-option>
+                <mat-option value='6'>Kit</mat-option>
+                <mat-option value='1'>Sem categoria</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Descrição</mat-label>
+            <textarea matInput formControlName="Description"></textarea>
+        </mat-form-field>
+        <div mat-dialog-content>
+
+        </div>
+        <div mat-dialog-actions class="action">
+            <button class="btn" type="submit">Adicionar</button>
+        </div>
+        <div mat-dialog-actions>
+            <button class="btn" >Cancelar</button>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,28 @@
+.limitText {
+    max-width: 300px;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+}
+
+.btn {
+    cursor: pointer;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+  .tollbar {
+    background-color: white;
+    margin-top: 10px;
+  }
+
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .table {
+
+  }

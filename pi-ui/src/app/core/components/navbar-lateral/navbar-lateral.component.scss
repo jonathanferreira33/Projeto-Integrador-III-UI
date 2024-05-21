@@ -1,0 +1,54 @@
+nav.menu-lateral {
+    width: 80px;
+    height: 100%;
+    background-color: #F1F4E6;
+    box-shadow: 4px 0 0 #F6BC31;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    transition-duration: .4s;
+}
+
+nav.menu-lateral:hover {
+    width: 300px;
+}
+
+.btn-expandir {
+    width: 100%; 
+    margin-left: 20px;  
+    padding-top: 40px;  
+}
+
+nav ul {
+    list-style-type: none;
+    padding-inline-start: 0;
+    transition-duration: 1s;
+}
+
+nav ul li {
+    transition-duration: .4s;
+}
+
+nav ul .item-menu:hover {
+    background-color: #F6BC31;
+    cursor: pointer;
+}
+
+nav a {
+    display: flex;
+    align-items: center;
+}
+
+nav a .txt-link{
+    margin-left: 40px;
+}
+
+nav .item-menu{
+    font-size: 20px;
+    color: #4D7B2D;
+    display: flex;
+    padding: 20px 0;
+    padding-left: 20px;
+}

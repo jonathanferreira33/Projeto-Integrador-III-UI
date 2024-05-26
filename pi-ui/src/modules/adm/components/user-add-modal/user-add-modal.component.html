@@ -9,7 +9,7 @@
             </mat-form-field>
             <mat-form-field appearance="outline">
                 <mat-label>Email</mat-label>
-                <input matInput formControlName="Email">
+                <input matInput formControlName="Email"  type="email">
             </mat-form-field>
             <div mat-dialog-content>
     
@@ -18,7 +18,7 @@
                 <button class="btn" type="submit">Adicionar</button>
             </div>
             <div mat-dialog-actions>
-                <button class="btn" >Cancelar</button>
+                <button class="btn" (click)="closeModal()" >Cancelar</button>
             </div>
         </div>
     </form>

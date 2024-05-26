@@ -1,6 +1,6 @@
 export interface ProductRequest {
-    Id:number;
-    namee:string;
+    Id?:number;
+    name:string;
     amount:number;
     category:number;
     description:string;

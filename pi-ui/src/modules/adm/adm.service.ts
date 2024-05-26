@@ -25,6 +25,8 @@ export class AdmService {
     return this.http.put<any>(this.baseAPIUrl + 'api/Product/editproduct', product);
   }
 
+
+  
   updateAmount(product:editAmountRequest): Observable<any> {
     return this.http.put<any>(this.baseAPIUrl + 'api/Product/quantitychange', product);
   }

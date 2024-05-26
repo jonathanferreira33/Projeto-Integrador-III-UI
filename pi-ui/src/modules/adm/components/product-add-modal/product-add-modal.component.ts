@@ -67,4 +67,8 @@ export class ProductAddModalComponent implements OnInit {
       )
     }
   }
+
+  closeModal(){
+    this.dialogRef.close();
+  }
 }

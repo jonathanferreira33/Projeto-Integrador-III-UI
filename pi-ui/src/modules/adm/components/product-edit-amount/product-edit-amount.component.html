@@ -1,4 +1,4 @@
-<form [formGroup]="modalForm" (ngSubmit)="editAmountProduct()" class="form">
+<form [formGroup]="modalForm" class="form">
     <div class="page">
         <div mat-dialog-title>
             <h2>Registrar movimentação de estoque</h2>
@@ -8,12 +8,13 @@
         </div>
         <mat-form-field appearance="outline">
             <mat-label>Quantidade</mat-label>
-            <input matInput formControlName="Quantidade">
+            <input matInput formControlName="amount" type="number" >
         </mat-form-field>
         <div mat-dialog-actions class="action">
-            <button class="btn" type="submit">Registrar</button>
+            <button class="btn" type="submit" (click)="editAmountProduct()"> Registrar</button>
+        </div>
+        <div mat-dialog-actions>
+            <button class="btn" (click)="closeModal()">Cancelar</button>
         </div>
     </div>
 </form>
-<!-- Validar Email -->
-<!-- Validators.pattern ("^[a-z0-9")] -->

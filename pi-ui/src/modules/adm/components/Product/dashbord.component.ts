@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { AdmService } from '../../adm.service';
 import { MatDialog } from '@angular/material/dialog';
 import { ProductAddModalComponent } from '../product-add-modal/product-add-modal.component';
@@ -14,6 +14,7 @@ export class DashbordComponent implements OnInit {
   displayedColumns: string[] = ['name', 'amount', 'category', 'description', '#'];
   dataSource: any[] = [];
   product: any;
+
 
   constructor(
     private apiService: AdmService,
@@ -40,33 +41,42 @@ export class DashbordComponent implements OnInit {
     const dialogRef = this.__dialog.open(ProductAddModalComponent);
 
     dialogRef.afterClosed().subscribe(result => {
-      window.location.reload();
+      this.fetchData();
+
     });
+
+    
   }
 
   editAmountForm(product: any) {
-    const dialogRef = this.__dialog.open(ProductEditAmountComponent);
+
+    const dialogRef = this.__dialog.open(ProductEditAmountComponent, {
+      data: product
+    });
 
     dialogRef.afterClosed().subscribe(result => {
-      window.location.reload();
+      this.fetchData();
     });
+
+    
   }
 
   ediProduct(product: any) {
-    const dialogRef = this.__dialog.open(ProductEditModalComponent);
+    const dialogRef = this.__dialog.open(ProductEditModalComponent, {
+      data: product
+    });
 
     dialogRef.afterClosed().subscribe(result => {
-      window.location.reload();
+      this.fetchData();
     });
     
-    dialogRef.close();
 
   }
 
   getValue(x:number) {
 
     const categorias = [
-      { number: 1, value: 'NONE'}, 
+      { number: 1, value: 'SEM CATEGORIA'}, 
       { number: 2, value: 'ALIMENTICIO'}, 
       { number: 3, value: 'ROUPAS'}, 
       { number: 4, value: 'HIGIENE'}, 

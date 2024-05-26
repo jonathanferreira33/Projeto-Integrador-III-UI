@@ -1,15 +1,15 @@
-<form [formGroup]="modalForm" (ngSubmit)="editProduct()" class="form">
+<form [formGroup]="modalForm" class="form">
     <div class="page">
         <div mat-dialog-title>
             <h2>Editar Produto</h2>
         </div>
             <mat-form-field appearance="outline">
                 <mat-label>Produto</mat-label>
-                <input matInput formControlName="Produto">
+                <input matInput formControlName="name">
             </mat-form-field>
             <mat-form-field appearance="outline">
                 <mat-label>Categoria</mat-label>
-                <mat-select formControlName="Category">
+                <mat-select formControlName="category" [(ngModel)]="selected">
                     <mat-option value='2'>Alimentos</mat-option>
                     <mat-option value='3'>Roupas</mat-option>
                     <mat-option value='4'>Higiene</mat-option>
@@ -20,16 +20,16 @@
             </mat-form-field>
             <mat-form-field appearance="outline">
                 <mat-label>Descrição</mat-label>
-                <textarea matInput formControlName="Description"></textarea>
+                <textarea matInput formControlName="description"></textarea>
             </mat-form-field>
             <div mat-dialog-content>
     
             </div>
             <div mat-dialog-actions class="action">
-                <button class="btn" type="submit">Adicionar</button>
+                <button class="btn" type="submit" (click)="editProduct()">Editar Produto</button>
             </div>
             <div mat-dialog-actions>
-                <button class="btn" >Cancelar</button>
+                <button class="btn" (click)="closeModal()">Cancelar</button>
             </div>
         </div>
     </form>

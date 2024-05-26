@@ -40,7 +40,7 @@ export class UserComponent implements OnInit {
     const dialogRef = this.__dialog.open(UserAddModalComponent);
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log('Usuario registrado');
+      this.fetchData();
     });
   }
 
@@ -48,7 +48,7 @@ export class UserComponent implements OnInit {
     const dialogRef = this.__dialog.open(UserEditModalComponent);
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log('Usuario editado');
+      this.fetchData();
     });
   }
 }

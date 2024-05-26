@@ -1,0 +1,19 @@
+<form [formGroup]="modalForm" (ngSubmit)="editAmountProduct()" class="form">
+    <div class="page">
+        <div mat-dialog-title>
+            <h2>Registrar movimentação de estoque</h2>
+        </div>
+        <div>
+           <p>Produto: <span>{{ Product }} </span> </p>
+        </div>
+        <mat-form-field appearance="outline">
+            <mat-label>Quantidade</mat-label>
+            <input matInput formControlName="Quantidade">
+        </mat-form-field>
+        <div mat-dialog-actions class="action">
+            <button class="btn" type="submit">Registrar</button>
+        </div>
+    </div>
+</form>
+<!-- Validar Email -->
+<!-- Validators.pattern ("^[a-z0-9")] -->

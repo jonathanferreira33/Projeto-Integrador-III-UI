@@ -1,10 +1,12 @@
 <mat-toolbar class="tollbar">
-  <mat-toolbar-row>
-      <img src="../assets/imgs/logo.jpg" alt="Logo Banco de Alimentos Osasco" class="logoprincipal" srcset="">
-      <span class="example-spacer"></span>
-      <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-          <mat-icon>menu</mat-icon>
-      </button>
-  </mat-toolbar-row>
+    <img src="../assets/imgs/logo.jpg" alt="Logo Banco de Alimentos Osasco" class="logoprincipal" srcset="">
+
+    <div class="spacer">
+    </div>
+
+      <a class="example-spacer" [routerLink] = "['/dashbord']">Estoque</a>
+      
+      <a class="example-spacer" [routerLink] = "['/user']">Voluntários</a>
+
 </mat-toolbar>
 <router-outlet></router-outlet>

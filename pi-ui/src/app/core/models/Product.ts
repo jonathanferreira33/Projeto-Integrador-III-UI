@@ -1,15 +1,13 @@
-type GUID = string & { isGuid: true};
-
-export interface editProductRequest {
-    Id:GUID; 
-    Name:string; 
-    Amount:number; 
-    EAN13:string; 
-    Description:string
+export interface ProductRequest {
+    Id:number;
+    namee:string;
+    amount:number;
+    category:number;
+    description:string;
 }
 
 
 export interface editAmountRequest {
-    Id:GUID; 
+    Id:number; 
     Amount:number; 
 }

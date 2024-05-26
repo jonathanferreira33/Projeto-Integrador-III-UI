@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LoginComponent } from './components/login/login.component';
 import { DashbordComponent } from './components/Product/dashbord.component';
-import { NavbarLateralComponent } from 'src/app/core/components/navbar-lateral/navbar-lateral.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MatTableModule } from '@angular/material/table';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
@@ -15,14 +14,24 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { ProductAddModalComponent } from './components/product-add-modal/product-add-modal.component';
 import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
+import { ProductEditAmountComponent } from './components/product-edit-amount/product-edit-amount.component';
+import { UserComponent } from './components/user/user.component';
+import { UserEditModalComponent } from './components/user-edit-modal/user-edit-modal.component';
+import { UserAddModalComponent } from './components/user-add-modal/user-add-modal.component';
+import { ProductEditModalComponent } from './components/product-edit-modal/product-edit-modal.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 
 @NgModule({
   declarations: [
     LoginComponent,
     DashbordComponent,
-    NavbarLateralComponent,
     ProductAddModalComponent,
+    ProductEditAmountComponent,
+    ProductEditModalComponent,
+    UserComponent,
+    UserEditModalComponent,
+    UserAddModalComponent,
   ],
   imports: [
     CommonModule,
@@ -37,7 +46,8 @@ import { MatInputModule } from '@angular/material/input';
     MatIconModule,
     MatInputModule,
     MatFormFieldModule,
-    MatSelectModule
+    MatSelectModule,
+    MatSnackBarModule
   ]
 })
 export class AdmModule { }

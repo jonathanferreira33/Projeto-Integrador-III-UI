@@ -1,0 +1,24 @@
+<form [formGroup]="modalForm" (ngSubmit)="addUser()" class="form">
+    <div class="page">
+        <div mat-dialog-title>
+            <h2>Adicionar novo voluntário</h2>
+        </div>
+            <mat-form-field appearance="outline">
+                <mat-label>Nome</mat-label>
+                <input matInput formControlName="Name">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Email</mat-label>
+                <input matInput formControlName="Email">
+            </mat-form-field>
+            <div mat-dialog-content>
+    
+            </div>
+            <div mat-dialog-actions class="action">
+                <button class="btn" type="submit">Adicionar</button>
+            </div>
+            <div mat-dialog-actions>
+                <button class="btn" >Cancelar</button>
+            </div>
+        </div>
+    </form>

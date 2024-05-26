@@ -5,12 +5,12 @@
     </div>
         <mat-form-field appearance="outline">
             <mat-label>Nome</mat-label>
-            <input matInput formControlName="Name">
+            <input matInput formControlName="name">
         </mat-form-field>
         <mat-form-field appearance="outline">
             <mat-label>Categoria</mat-label>
-            <mat-select [(ngModel)]="modeselect" [placeholder]="modeselect" formControlName="Category">
-                <mat-option value='2'>Alimentos</mat-option>
+            <mat-select [(ngModel)]="modeselect" [placeholder]="modeselect" formControlName="category">
+                <mat-option value='2'>Alimenticio</mat-option>
                 <mat-option value='3'>Roupas</mat-option>
                 <mat-option value='4'>Higiene</mat-option>
                 <mat-option value='5'>Higiene Pessoal</mat-option>
@@ -20,13 +20,13 @@
         </mat-form-field>
         <mat-form-field appearance="outline">
             <mat-label>Descrição</mat-label>
-            <textarea matInput formControlName="Description"></textarea>
+            <textarea matInput formControlName="description"></textarea>
         </mat-form-field>
         <div mat-dialog-content>
 
         </div>
         <div mat-dialog-actions class="action">
-            <button class="btn" type="submit">Adicionar</button>
+            <button class="btn" type="submit">Confirmar</button>
         </div>
         <div mat-dialog-actions>
             <button class="btn" >Cancelar</button>
